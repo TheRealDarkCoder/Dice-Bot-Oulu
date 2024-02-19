@@ -247,12 +247,6 @@ class General(commands.Cog, name="general"):
         )
         embed.set_footer(text=f"The question was: {question}")
         await context.send(embed=embed)
-
-    @commands.hybrid_command(
-        name="bitcoin",
-        description="Get the current price of bitcoin.",
-    )
-    async def bitcoin(self, context: Context) -> None:
         """
         Get the current price of bitcoin.
 
