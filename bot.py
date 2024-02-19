@@ -61,6 +61,8 @@ intents.presences = True
 """
 
 intents = discord.Intents.default()
+intents.members = True
+intents.message_content = True
 
 """
 Uncomment this if you want to use prefix (normal) commands.
@@ -172,7 +174,7 @@ class DiscordBot(commands.Bot):
         """
         Setup the game status task of the bot.
         """
-        statuses = ["with you!", "with Krypton!", "with humans!"]
+        statuses = ["at Oulu!", "ice hockey.", "with a koira."]
         await self.change_presence(activity=discord.Game(random.choice(statuses)))
 
     @status_task.before_loop
